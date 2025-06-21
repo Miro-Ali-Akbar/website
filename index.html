@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+<!-- <meta http-equiv="refresh" content="1"> -->
   <head>
     <meta charset="UTF-8">
     <title>Website</title>
-    <link rel="stylesheet" href="style.css" />
+    <link id="css" rel="stylesheet" href="style.css" />
   </head>
 
   <body>
     <div class="page">
-        <div class="ball left"></div>
+        <div onclick="toggleCSS()" class="ball left"></div>
       <div class="box-row">
         <div class="floating-box side">
           <div class="floating-box focus">
@@ -28,11 +29,27 @@
             <span>i</span>
             <span>r</span>
             <span>o</span>
+            <span></span>
           </span> and im currently studding my masters in IT.</p>
+          <div id="cookies" class ="floating-box focus cookies">
+            <span class="text-select">This website does <br><u>not</u> use cookies</span>
+              <div onclick="CloseDiv('cookies')" class="floating-box select ok"><span class="text-select">Ok</span></div>
+              <div onclick="CloseDiv('cookies')" class="floating-box select showAgain"><span class="text-select">Show again</span></div>
+          </div>
         </div>
         <div class="floating-box side"></div>
       </div>
-        <div class="ball right"></div>
+      <div class="ball right"></div>
     </div>
+
+    <script>
+      function closeDiv(ID) {
+        document.getElementById(ID).style.display = "none";
+      } 
+
+      function toggleCSS() {
+        document.getElementById('css').disabled = true;
+      }
+    </script>
   </body>
 </html>
