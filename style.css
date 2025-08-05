@@ -29,14 +29,12 @@ body {
 }
 
 .text-select {
-  padding-top: 5px;
-  align-items: center;  
+  align-items: center;
   text-align: center;
   font-size: 12px;
   color: var(--off-white);
-  display: inline-block; 
+  display: inline-block;
   text-shadow: 1px 1px 0px var(--black);
-  /*-webkit-text-stroke: 0.5px var(--black);*/
 }
 
 .text-select.large {
@@ -46,10 +44,10 @@ body {
 }
 
 .page {
-  position:absolute;
-  top:50%;
-  left:50%;
-  transform:translateX(-50%) translateY(-50%);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
 }
 
 .ball {
@@ -85,8 +83,9 @@ body {
   border: 2px solid var(--black);
   border-radius: 5px;
   box-shadow: 10px 10px 0 rgba(0, 0, 0, 1);
-  flex: 0 0 auto; 
+  flex: 0 0 auto;
   text-align: center;
+  padding-top: 5px;
 }
 
 .floating-box.side {
@@ -136,35 +135,47 @@ body {
   box-shadow: 2px 2px 0 rgba(0, 0, 0, 1);
 }
 
-.floating-box.select.ok{
+.floating-box.select.ok {
   width: 25px;
   left: 10px;
 }
 
-.floating-box.select.showAgain{
+.floating-box.select.showAgain {
   width: 75px;
   right: 10px;
 }
 
-.wave span{
+.wave span {
   display: inline-block;
   margin-right: -3px;
   font-weight: bold;
   animation: wave-animation 1.5s ease-in-out infinite;
 }
+
 .wave span:nth-child(1) {
   animation-delay: 0s;
 }
+
 .wave span:nth-child(2) {
   animation-delay: 0.2s;
 }
+
 .wave span:nth-child(3) {
   animation-delay: 0.4s;
 }
+
 .wave span:nth-child(4) {
   animation-delay: 0.6s;
 }
+
 @keyframes wave-animation {
-0, 100% { transform: translateY(0); }
-50% { transform: translateY(-5px); }
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-5px);
+  }
 }
