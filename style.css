@@ -10,7 +10,7 @@
   --border-width: 25px;
   --focus-width: 100px;
   --focus-height: 50px;
-  --focus-height-tall: 144px;
+  --focus-height-tall: 114px;
 }
 
 html {
@@ -108,11 +108,41 @@ body {
   background-color: var(--focus);
   border: 1px solid var(--black);
   box-shadow: 2px 2px 0 rgba(0, 0, 0, 1);
+  gap: 5px;
 
 }
 
 .floating-box.focus.tall {
   height: var(--focus-height-tall);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding-top: 10px;
+}
+
+.social-item {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  width: 100%;
+  padding-left: 20px;
+}
+
+.kilroy-large {
+  width: 55%;
+  height: auto;
+  position: relative;
+  top: -24px;
+  transform: rotate(1.5deg);
+}
+
+.kilroy-small {
+  width: 30%;
+  height: auto;
+  position: relative;
+  top: -32px;
+  transform: rotate(1.5deg);
 }
 
 

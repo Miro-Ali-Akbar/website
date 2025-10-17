@@ -10,18 +10,28 @@
 
 <body>
   <div class="page">
-    <div onclick="toggleCSS()" onpointerover="toggleCSS()" class="ball left"></div>
+    <div class="ball left"></div>
     <div class="box-row">
       <div class="floating-box side">
         <div class="floating-box focus">
 
         </div>
         <div class="floating-box focus box-row">
-          <img src="images/Email.svg" alt="" width="25">
-          <span class="text-select"> Email </span>
+          <div class="social-item">
+            <img src="images/Email.svg" alt="" width="25">
+            <span class="text-select"> Email </span>
+          </div>
         </div>
         <div class="floating-box focus tall">
           <span class="text-select large"> Socials </span>
+          <div class="social-item">
+            <img src="images/Github.svg" alt="" width="25">
+            <span class="text-select"> GitHub </span>
+          </div>
+          <div class="social-item">
+            <img src="images/Linkedin.svg" alt="" width="25">
+            <span class="text-select"> LinkedIn </span>
+          </div>
         </div>
       </div>
       <div class="floating-box center">
@@ -39,9 +49,12 @@
               again</span></div>
         </div>
       </div>
-      <div class="floating-box side"></div>
+      <div class="floating-box side">
+        <img src="images/kilroy.png" alt="Kilroy" class="kilroy-large">
+        <img src="images/kilroy.png" alt="Kilroy" class="kilroy-small">
+      </div>
     </div>
-    <div class="ball right"></div>
+    <div onclick="toggleCSS()" onpointerover="toggleCSS()" class="ball right"></div>
   </div>
 
   <script>
