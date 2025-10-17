@@ -121,31 +121,6 @@ body {
   padding-top: 10px;
 }
 
-.social-item {
-  display: flex;
-  align-items: center;
-  gap: 5px;
-  width: 100%;
-  padding-left: 20px;
-}
-
-.kilroy-large {
-  width: 55%;
-  height: auto;
-  position: relative;
-  top: -24px;
-  transform: rotate(1.5deg);
-}
-
-.kilroy-small {
-  width: 30%;
-  height: auto;
-  position: relative;
-  top: -32px;
-  transform: rotate(1.5deg);
-}
-
-
 .floating-box.focus.cookies {
   position: absolute;
   width: 150px;
@@ -173,6 +148,34 @@ body {
 .floating-box.select.showAgain {
   width: 75px;
   right: 10px;
+}
+
+.social-item {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  width: 100%;
+  padding-left: 20px;
+}
+
+.kilroy-large {
+  width: 55%;
+  height: auto;
+  position: relative;
+  top: -24px;
+  transform: rotate(1.5deg);
+}
+
+.kilroy-small {
+  width: 30%;
+  height: auto;
+  position: relative;
+  top: -32px;
+  transform: rotate(1.5deg);
+}
+
+.css-text {
+  display: none;
 }
 
 .wave span {
