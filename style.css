@@ -96,6 +96,22 @@ body {
 .floating-box.center {
   width: var(--center-width);
   height: var(--box-height);
+  overflow-y: auto;
+  overflow-x: hidden;
+  scrollbar-width: thin;
+  scrollbar-color: var(--focus) var(--off-focus);
+}
+
+.floating-box.center p {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  white-space: normal;
+}
+
+.floating-box h3 a {
+  color: var(--black);
+  text-decoration: none;
+  /* text-align: left; */
 }
 
 .floating-box.focus {
@@ -121,11 +137,45 @@ body {
   padding-top: 10px;
 }
 
-.floating-box.focus.cookies {
+.floating-box.focus.navigation {
   position: absolute;
+  top: 5px;
+  height: 100px;
+}
+
+.floating-box.focus.navigation.box-row {
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+
+.floating-box.focus.navigation h3 {
+  margin: 0;
+  font-size: 14px;
+  color: var(--black);
+  text-align: center;
+}
+
+.floating-box.focus.navigation a {
+  color: var(--black);
+  text-decoration: none;
+  font-size: 12px;
+  display: block;
+  padding: 2px 4px;
+  border-radius: 3px;
+  transition: background-color 0.2s;
+  text-align: center;
+}
+
+.floating-box.focus.navigation a:hover {
+  background-color: var(--off-focus);
+}
+
+.floating-box.focus.cookies {
+  position: sticky;
   width: 150px;
   height: 75px;
-  left: calc(var(--center-width) - 101px);
+  margin-left: calc(var(--center-width) - 101px);
   bottom: var(--border-width);
 }
 
@@ -167,10 +217,10 @@ body {
 }
 
 .kilroy-small {
-  width: 30%;
+  width: 40%;
   height: auto;
   position: relative;
-  top: -32px;
+  top: -29px;
   transform: rotate(1.5deg);
 }
 
@@ -203,12 +253,12 @@ body {
 
 @keyframes wave-animation {
 
-  0%,
-  100% {
-    transform: translateY(0);
-  }
+0%,
+100% {
+  transform: translateY(0);
+}
 
-  50% {
-    transform: translateY(-5px);
-  }
+50% {
+  transform: translateY(-5px);
+}
 }
