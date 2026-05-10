@@ -327,3 +327,14 @@ flex-direction: column;
   transform: translateY(-5px);
 }
 }
+
+@keyframes spin-y {
+  from { transform: rotateY(0deg); }
+  to   { transform: rotateY(360deg); }
+}
+
+.wip {
+  display: inline-block;
+  font-weight: bold;
+  animation: spin-y 2.5s linear infinite;
+}
