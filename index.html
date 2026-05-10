@@ -138,7 +138,7 @@
         <h2 id="projects">Projects</h2>
         <div style="display:flex;gap:20px;align-items:flex-start;margin:30px;">
           <p style="margin:0;padding:0;"><a href="https://github.com/Miro-Ali-Akbar/Ink" title="Github link" target="_blank" style="font-size:1.17em;font-weight:bold;color:var(--black);text-decoration:none;">Ink</a> - A daily todo script that opens a dated markdown file in your terminal editor and renders it as your GNOME wallpaper on save. Used as a daily todo list and reminder that work is never done. Written in bash with a Python stdlib renderer.</p>
-          <img src="images/ink-preview.png" alt="Ink preview" style="width:160px;flex-shrink:0;border:2px solid var(--black);border-radius:5px;box-shadow:4px 4px 0 rgba(0,0,0,1);">
+          <img src="images/ink-preview.png" alt="Ink preview" onclick="openLightbox(this)" style="width:160px;flex-shrink:0;border:2px solid var(--black);border-radius:5px;box-shadow:4px 4px 0 rgba(0,0,0,1);cursor:zoom-in;">
         </div>
         <h3><a href="https://github.com/Miro-Ali-Akbar/dotfiles" title="Github link" target="_blank">dotfiles</a></h3>
         <h3><a href="https://github.com/Miro-Ali-Akbar/IT-Uppsala-Exams" title="Github link"
@@ -258,7 +258,16 @@
     }
     currentCount();
 
+    function openLightbox(img) {
+      document.getElementById('lightbox-img').src = img.src;
+      document.getElementById('lightbox').style.display = 'flex';
+    }
+
   </script>
+
+  <div id="lightbox" onclick="this.style.display='none'" style="display:none;position:fixed;inset:0;z-index:1000;align-items:center;justify-content:center;cursor:zoom-out;">
+    <img id="lightbox-img" src="" alt="" style="max-width:90vw;max-height:90vh;border:2px solid var(--black);border-radius:5px;box-shadow:10px 10px 0 rgba(0,0,0,1);">
+  </div>
 </body>
 
 </html>
