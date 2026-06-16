@@ -157,6 +157,10 @@ body {
   padding-top: 10px;
 }
 
+.floating-box.focus.tall .social-item {
+  align-self: stretch;
+}
+
 .floating-box.focus.navigation {
   position: absolute;
   top: 5px;
@@ -269,8 +273,29 @@ flex-direction: column;
   align-items: center;
   gap: 5px;
   width: 100%;
-  padding-left: 20px;
+  padding-left: 10px;
+  box-sizing: border-box;
   text-decoration: none;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+}
+
+div.social-item {
+  align-self: center;
+}
+
+.social-item::before {
+  content: '';
+  position: absolute;
+  inset: 0 10px;
+  border-radius: 4px;
+  background: transparent;
+  z-index: -1;
+}
+
+.social-item:hover::before {
+  background: var(--off-focus);
 }
 
 .kilroy-large {

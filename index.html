@@ -154,9 +154,21 @@
           <a href="#skills">Skills</a>
           <a href="#projects">Projects</a>
         </div>
+        <div class="floating-box focus count box-row" style="bottom:calc(var(--focus-height) + var(--border-width) + var(--border-width));" title="In progress">
+          <h3> Clap </h3>
+          <div class="count-border" id="clap-digits">
+            <span class="digit">0</span>
+            <span class="digit">0</span>
+            <span class="digit">0</span>
+            <span class="digit">0</span>
+            <span class="digit">0</span>
+            <span class="digit">0</span>
+            <span class="digit">0</span>
+          </div>
+        </div>
         <div class="floating-box focus count box-row">
           <h3> Visitors </h3>
-          <div class="count-border">
+          <div class="count-border" id="visitor-digits">
             <span class="digit">0</span>
             <span class="digit">0</span>
             <span class="digit">0</span>
@@ -209,7 +221,7 @@
     window.addEventListener('load', scalePageToFit);
     // window.addEventListener('resize', scalePageToFit);
 
-    const digitElements = document.querySelectorAll('.digit');
+    const digitElements = document.querySelectorAll('#visitor-digits .digit');
 
     function mulberry32(a) {
       return function () {
@@ -244,6 +256,18 @@
       });
     }
     currentCount();
+
+    function currentClap() {
+      return 1;
+    }
+
+    (function () {
+      const count = currentClap();
+      const countString = (count % 10000000).toString().padStart(7, '0');
+      document.querySelectorAll('#clap-digits .digit').forEach((el, i) => {
+        el.innerText = countString[i];
+      });
+    })();
 
     function openLightbox(img) {
       document.getElementById('lightbox-img').src = img.src;
