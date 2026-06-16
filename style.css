@@ -338,3 +338,16 @@ flex-direction: column;
   font-weight: bold;
   animation: spin-y 2.5s linear infinite;
 }
+
+.project-preview {
+  flex-shrink: 0;
+  border-radius: 5px;
+  box-shadow: 4px 4px 0 rgba(0,0,0,1), inset 0 0 0 2px var(--black);
+  overflow: hidden;
+  cursor: zoom-in;
+}
+
+.project-preview img {
+  display: block;
+  width: 160px;
+}
