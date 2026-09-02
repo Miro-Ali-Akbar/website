@@ -15,7 +15,16 @@
 
 html {
   height: 100%;
-  cursor: url(https://cur.cursors-4u.net/games/gam-14/gam1340.cur), auto !important;
+  cursor: url(images/wii-pointer-ccw.cur), auto !important;
+}
+
+a, .social-item {
+  cursor: url(images/wii-help-ccw.cur), pointer !important;
+}
+
+::selection {
+  background-color: var(--red);
+  color: var(--off-white);
 }
 
 body {
