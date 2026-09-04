@@ -84,7 +84,7 @@
           <span class="wip">WIP</span>
         </div>
         <div class="floating-box focus box-row">
-          <div class="social-item"
+          <div class="social-item cur-link"
             onclick="window.open(`&#x6D;&#x61;&#x69;&#x6C;&#x74;&#x6F;&#x3A;&#x77;&#x65;&#x62;&#x73;&#x69;&#x74;&#x65;&#x40;&#x6D;&#x69;&#x72;&#x6F;&#x2E;&#x7A;&#x69;&#x70;`, '_blank');">
             <img src="images/Email.svg" alt="" width="25">
             <span class="text-select"> Email </span>
@@ -139,9 +139,9 @@
         <script src="projects.js"></script>
 
         <div id="cookies" class="floating-box focus cookies">
-          <span class="text-select">This website does <br><u onclick="window.open('https://en.wikipedia.org/wiki/Negation','_blank')" style="cursor:pointer;">not</u> use cookies</span>
-          <div onclick="toggleDiv('cookies')" class="floating-box select ok"><span class="text-select">Ok</span></div>
-          <div onclick="toggleDiv('cookies')" class="floating-box select showAgain"><span class="text-select">Show
+          <span class="text-select">This website does <br><u class="cur-link" onclick="window.open('https://en.wikipedia.org/wiki/Negation','_blank')">not</u> use cookies</span>
+          <div onclick="toggleDiv('cookies')" class="floating-box select ok cur-button"><span class="text-select">Ok</span></div>
+          <div onclick="toggleDiv('cookies')" class="floating-box select showAgain cur-button"><span class="text-select">Show
               again</span></div>
         </div>
       </div>
@@ -154,7 +154,7 @@
           <a href="#skills">Skills</a>
           <a href="#projects">Projects</a>
         </div>
-        <div class="floating-box focus count box-row" style="bottom:calc(var(--focus-height) + var(--border-width) + var(--border-width));cursor:pointer;" onclick="handleClap()" title="Give the website a clap!">
+        <div class="floating-box focus count box-row cur-button" style="bottom:calc(var(--focus-height) + var(--border-width) + var(--border-width));" onclick="handleClap()" title="Give the website a clap!">
           <h3> Clap </h3>
           <div class="count-border" id="clap-digits">
             <span class="digit">0</span>

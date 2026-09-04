@@ -18,8 +18,12 @@ html {
   cursor: url(images/wii-pointer-ccw.cur), auto !important;
 }
 
-a, .social-item {
+a, .cur-link {
   cursor: url(images/wii-help-ccw.cur), pointer !important;
+}
+
+.cur-button {
+  cursor: url(images/wii-open-ccw.cur), pointer !important;
 }
 
 ::selection {
@@ -257,7 +261,6 @@ flex-direction: column;
 }
 
 .floating-box.select {
-  cursor: pointer;
   position: absolute;
   height: 25px;
   top: 40px;
@@ -285,7 +288,6 @@ flex-direction: column;
   padding-left: 10px;
   box-sizing: border-box;
   text-decoration: none;
-  cursor: pointer;
   position: relative;
   z-index: 0;
 }
