@@ -26,6 +26,41 @@ a, .cur-link {
   cursor: url(images/wii-open-ccw.cur), pointer !important;
 }
 
+/* JS replaces cursor everything still works with JS disabled */
+html.js-cursor-active {
+  cursor: none !important;
+}
+
+html.js-cursor-active a,
+html.js-cursor-active .cur-link,
+html.js-cursor-active .cur-button {
+  cursor: inherit !important;
+}
+
+#wii-cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 32px;
+  height: 32px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-image: url(images/wii-pointer-ccw.png);
+  pointer-events: none;
+  z-index: 99999;
+  opacity: 0;
+  transform: translate(-8px, -4px) scale(1) rotate(0deg);
+  transition: transform 0.15s cubic-bezier(0.34, 1.56, 0.64, 1), opacity 0.15s ease;
+}
+
+#wii-cursor.visible {
+  opacity: 1;
+}
+
+#wii-cursor.swap {
+  transform: translate(-8px, -4px) scale(0.55) rotate(-18deg);
+}
+
 ::selection {
   background-color: var(--red);
   color: var(--off-white);

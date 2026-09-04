@@ -273,7 +273,52 @@
       document.getElementById('lightbox').style.display = 'flex';
     }
 
+    (function () {
+      if (!window.matchMedia('(pointer: fine)').matches) return;
 
+      const CURSORS = {
+        default: 'images/wii-pointer-ccw.png',
+        link: 'images/wii-help-ccw.png',
+        button: 'images/wii-open-ccw.png',
+      };
+
+      const cursorEl = document.createElement('div');
+      cursorEl.id = 'wii-cursor';
+      document.body.appendChild(cursorEl);
+      document.documentElement.classList.add('js-cursor-active');
+
+      let currentState = 'default';
+
+      function stateFor(el) {
+        if (el.closest('.project-preview, #lightbox')) return null;
+        if (el.closest('.cur-button')) return 'button';
+        if (el.closest('a, .cur-link')) return 'link';
+        return 'default';
+      }
+
+      document.addEventListener('mousemove', (e) => {
+        cursorEl.style.left = e.clientX + 'px';
+        cursorEl.style.top = e.clientY + 'px';
+
+        const state = stateFor(e.target);
+        if (state === null) {
+          cursorEl.classList.remove('visible');
+          return;
+        }
+        cursorEl.classList.add('visible');
+
+        if (state !== currentState) {
+          currentState = state;
+          cursorEl.classList.add('swap');
+          setTimeout(() => {
+            cursorEl.style.backgroundImage = `url(${CURSORS[state]})`;
+            cursorEl.classList.remove('swap');
+          }, 90);
+        }
+      });
+
+      document.addEventListener('mouseleave', () => cursorEl.classList.remove('visible'));
+    })();
   </script>
 
   <div id="lightbox" onclick="this.style.display='none'" style="display:none;position:fixed;inset:0;z-index:1000;align-items:center;justify-content:center;cursor:zoom-out;">
