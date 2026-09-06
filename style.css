@@ -76,6 +76,12 @@ body {
   src: url('https://rsms.me/inter/font-files/Inter-Regular.woff2') format('woff2');
 }
 
+@font-face {
+  font-family: 'DSEG7Classic';
+  src: url('fonts/DSEG7Classic-Bold.woff2') format('woff2');
+  font-weight: bold;
+}
+
 .text-select {
   align-items: center;
   text-align: center;
@@ -232,10 +238,11 @@ flex-direction: column;
 .digit {
   background-color: var(--off-white);
   color: var(--black);
-  font-size: 12px;
+  font-size: 9px;
   padding-left: 1px;
   padding-right: 1px;
-  font-family: 'Courier New', monospace; /* Monospace for alignment */
+  padding-top: 1px;
+  font-family: 'DSEG7Classic', 'Courier New', monospace;
   border: 1px solid var(--black);
   border-right: none;
   text-align: center;
