@@ -83,8 +83,32 @@ async function handleClap() {
 loadCounts().then(registerVisit);
 
 function openLightbox(img) {
-  document.getElementById('lightbox-img').src = img.src;
+  const lightboxImg = document.getElementById('lightbox-img');
+  lightboxImg.src = img.src;
+  setLightboxZoom(lightboxImg, false);
   document.getElementById('lightbox').style.display = 'flex';
+}
+
+function toggleLightboxZoom(img) {
+  setLightboxZoom(img, !img.dataset.zoomed);
+}
+
+// Zoomed fills 90% of the viewport, keeping aspect ratio
+function setLightboxZoom(img, zoomed) {
+  if (zoomed) {
+    const fit = Math.min(0.9 * window.innerWidth / img.naturalWidth, 0.9 * window.innerHeight / img.naturalHeight);
+    img.style.width = Math.round(img.naturalWidth * fit) + 'px';
+    img.style.maxWidth = 'none';
+    img.style.maxHeight = 'none';
+    img.style.cursor = 'zoom-out';
+    img.dataset.zoomed = '1';
+  } else {
+    img.style.width = '';
+    img.style.maxWidth = 'var(--center-width)';
+    img.style.maxHeight = 'var(--box-height)';
+    img.style.cursor = 'zoom-in';
+    delete img.dataset.zoomed;
+  }
 }
 
 (function () {
