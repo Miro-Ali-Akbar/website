@@ -100,13 +100,11 @@ function setLightboxZoom(img, zoomed) {
     img.style.width = Math.round(img.naturalWidth * fit) + 'px';
     img.style.maxWidth = 'none';
     img.style.maxHeight = 'none';
-    img.style.cursor = 'zoom-out';
     img.dataset.zoomed = '1';
   } else {
     img.style.width = '';
     img.style.maxWidth = 'var(--center-width)';
     img.style.maxHeight = 'var(--box-height)';
-    img.style.cursor = 'zoom-in';
     delete img.dataset.zoomed;
   }
 }
@@ -128,7 +126,6 @@ function setLightboxZoom(img, zoomed) {
   let currentState = 'default';
 
   function stateFor(el) {
-    if (el.closest('.project-preview, #lightbox')) return null;
     if (el.closest('.cur-button')) return 'button';
     if (el.closest('a, .cur-link')) return 'link';
     return 'default';
@@ -139,10 +136,6 @@ function setLightboxZoom(img, zoomed) {
     cursorEl.style.top = e.clientY + 'px';
 
     const state = stateFor(e.target);
-    if (state === null) {
-      cursorEl.classList.remove('visible');
-      return;
-    }
     cursorEl.classList.add('visible');
 
     if (state !== currentState) {

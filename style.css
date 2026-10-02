@@ -436,12 +436,18 @@ div.social-item {
   border-radius: 5px;
   box-shadow: 4px 4px 0 rgba(0,0,0,1), inset 0 0 0 2px var(--black);
   overflow: hidden;
-  cursor: zoom-in;
 }
 
 .project-preview img {
   display: block;
   width: 160px;
+}
+
+/* Plain preview image without border or lightbox zoom */
+.project-image {
+  display: block;
+  width: 160px;
+  flex-shrink: 0;
 }
 
 .project-row {

@@ -186,8 +186,8 @@
 
   <script src="main.js"></script>
 
-  <div id="lightbox" onclick="this.style.display='none'" style="display:none;position:fixed;inset:0;z-index:1000;align-items:center;justify-content:center;cursor:zoom-out;">
-    <img id="lightbox-img" src="" alt="" onclick="event.stopPropagation(); toggleLightboxZoom(this)" style="max-width:var(--center-width);max-height:var(--box-height);border:2px solid var(--black);border-radius:5px;box-shadow:10px 10px 0 rgba(0,0,0,1);cursor:zoom-in;">
+  <div id="lightbox" class="cur-button" onclick="this.style.display='none'" style="display:none;position:fixed;inset:0;z-index:1000;align-items:center;justify-content:center;">
+    <img id="lightbox-img" class="cur-button" src="" alt="" onclick="event.stopPropagation(); toggleLightboxZoom(this)" style="max-width:var(--center-width);max-height:var(--box-height);border:2px solid var(--black);border-radius:5px;box-shadow:10px 10px 0 rgba(0,0,0,1);">
   </div>
 </body>
 
