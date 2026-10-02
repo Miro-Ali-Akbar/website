@@ -172,6 +172,7 @@ body {
   margin-right: 30px;
 }
 
+.floating-box h2 a,
 .floating-box h3 a {
   color: var(--black);
   text-decoration: none;
@@ -292,6 +293,12 @@ flex-direction: column;
 
 .floating-box.focus.navigation a:hover {
   background-color: var(--off-focus);
+}
+
+.floating-box.focus.navigation a.active {
+  background-color: var(--off-focus);
+  color: var(--black);
+  text-shadow: none;
 }
 
 .floating-box.focus.cookies {
@@ -435,4 +442,44 @@ div.social-item {
 .project-preview img {
   display: block;
   width: 160px;
+}
+
+.project-row {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  margin: 30px;
+}
+
+.floating-box.center .project-row p {
+  margin: 0;
+  padding: 0;
+}
+
+.project-title {
+  font-size: 1.17em;
+  font-weight: bold;
+  color: var(--black);
+  text-decoration: none;
+}
+
+.project-ref {
+  color: var(--black);
+}
+
+/* projects.html opened on its own fills the whole window */
+.floating-box.center.standalone {
+  position: fixed;
+  inset: 0;
+  width: auto;
+  height: auto;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.project-spacer {
+  width: 160px;
+  height: 43px;
+  flex-shrink: 0;
 }
