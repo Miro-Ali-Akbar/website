@@ -253,6 +253,10 @@ flex-direction: column;
   border-right: 1px solid var(--black);
 }
 
+.floating-box.focus.count.clap {
+  bottom: calc(var(--focus-height) + var(--border-width) + var(--border-width));
+}
+
 .floating-box.focus.count h3 {
   color: var(--off-white);
   margin: 0;
@@ -425,6 +429,12 @@ div.social-item {
   to   { transform: rotateY(360deg); }
 }
 
+.wip-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .wip {
   display: inline-block;
   font-weight: bold;
@@ -488,4 +498,20 @@ div.social-item {
   width: 160px;
   height: 43px;
   flex-shrink: 0;
+}
+
+#lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  align-items: center;
+  justify-content: center;
+}
+
+#lightbox-img {
+  max-width: var(--center-width);
+  max-height: var(--box-height);
+  border: 2px solid var(--black);
+  border-radius: 5px;
+  box-shadow: 10px 10px 0 rgba(0,0,0,1);
 }

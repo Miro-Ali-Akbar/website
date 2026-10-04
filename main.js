@@ -103,8 +103,8 @@ function setLightboxZoom(img, zoomed) {
     img.dataset.zoomed = '1';
   } else {
     img.style.width = '';
-    img.style.maxWidth = 'var(--center-width)';
-    img.style.maxHeight = 'var(--box-height)';
+    img.style.maxWidth = '';
+    img.style.maxHeight = '';
     delete img.dataset.zoomed;
   }
 }
