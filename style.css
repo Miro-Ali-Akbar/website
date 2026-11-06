@@ -449,11 +449,6 @@ div.social-item {
   overflow: hidden;
 }
 
-.project-preview.plain {
-  box-shadow: none;
-  border-radius: 0;
-}
-
 .project-preview img {
   display: block;
   width: 160px;
