@@ -171,7 +171,7 @@ function setLightboxZoom(img, zoomed) {
   update();
 
   // Load projects from projects.html (needs a server, see serve.sh)
-  fetch('projects.html', { cache: 'no-cache' })
+  fetch('projects.html')
     .then(r => r.text())
     .then(html => {
       const doc = new DOMParser().parseFromString(html, 'text/html');

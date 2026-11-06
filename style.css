@@ -137,8 +137,7 @@ body {
   background-color: var(--off-focus);
   border: 2px solid var(--black);
   border-radius: 5px;
-  /* The second, hidden layer covers the 1px light seam that fractional zoom leaves between border and shadow */
-  box-shadow: 10px 10px 0 rgba(0, 0, 0, 1), 5px 5px 0 rgba(0, 0, 0, 1);
+  box-shadow: 10px 10px 0 rgba(0, 0, 0, 1);
   flex: 0 0 auto;
   text-align: center;
   padding-top: 5px;
