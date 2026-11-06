@@ -10,8 +10,10 @@ function toggleDiv(ID) {
 function toggleCSS() {
   const css = document.getElementById('css');
   if (css.disabled) {
-    document.querySelector('.page').style.transform = `translateX(-50%) translateY(-50%) scale(${scale})`;
+    document.querySelector('.page').style.zoom = scale;
+    document.querySelector('.page').style.transform = 'translateX(-50%) translateY(-50%)';
   } else {
+    document.querySelector('.page').style.zoom = '';
     document.querySelector('.page').style.transform = 'none';
   }
   css.disabled = !css.disabled;
@@ -29,7 +31,8 @@ function scalePageToFit() {
   const scaleY = viewportHeight / pageHeight;
   scale = Math.min(scaleX, scaleY);
 
-  page.style.transform = `translateX(-50%) translateY(-50%) scale(${scale})`;
+  page.style.zoom = scale;
+  page.style.transform = 'translateX(-50%) translateY(-50%)';
 }
 
 window.addEventListener('load', scalePageToFit);
