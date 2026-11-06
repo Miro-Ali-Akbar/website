@@ -453,6 +453,13 @@ div.social-item {
   width: 160px;
 }
 
+/* Plain preview image without border or lightbox zoom */
+.project-image {
+  display: block;
+  width: 160px;
+  flex-shrink: 0;
+}
+
 .project-row {
   display: flex;
   gap: 20px;
